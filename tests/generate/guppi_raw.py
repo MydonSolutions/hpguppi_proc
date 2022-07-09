@@ -22,7 +22,8 @@ antenna_array = stg.voltage.MultiAntennaArray(num_antennas=n_ant,
                                     fch1=6*u.GHz,
                                     ascending=False,
                                     num_pols=2,
-                                    delays=delays)
+                                    delays=delays,
+                                    seed=3141592)
 
 for stream in antenna_array.bg_streams:
         stream.add_noise(v_mean=0,
